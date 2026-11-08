@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 135" width="100%" height="135">
+  <defs>
+    <linearGradient id="sbg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#05070B"/>
+      <stop offset="100%" stop-color="#090D16"/>
+    </linearGradient>
+    <pattern id="cells" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect x="2" y="2" width="11" height="11" rx="2.5" fill="#0D1522" stroke="#141E30" stroke-width="0.6"/>
+    </pattern>
+    <filter id="sglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace; }
+    .snake {
+      stroke-dasharray: 140 1600;
+      animation: slither 7s linear infinite;
+    }
+    @keyframes slither {
+      0% { stroke-dashoffset: 1740; }
+      100% { stroke-dashoffset: 0; }
+    }
+  </style>
+  <rect width="900" height="135" rx="10" fill="url(#sbg)" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="24" y="24" class="mono" font-size="10.5" font-weight="700" fill="#64748B" letter-spacing="1.5">CONTINUOUS DEPLOYMENT &amp; CONTRIBUTION ACTIVITY STREAM // 24x7</text>
+  <text x="735" y="24" class="mono" font-size="10.5" font-weight="700" fill="#00FF9D">● AUTONOMOUS COMMITS</text>
+
+  <g transform="translate(20, 34)">
+    <rect width="860" height="82" fill="url(#cells)"/>
+    <!-- Active green commit clusters -->
+    <g fill="#008F5A" opacity="0.75">
+      <rect x="66" y="18" width="11" height="11" rx="2.5"/><rect x="82" y="34" width="11" height="11" rx="2.5"/>
+      <rect x="146" y="18" width="11" height="11" rx="2.5"/><rect x="162" y="50" width="11" height="11" rx="2.5"/>
+      <rect x="258" y="34" width="11" height="11" rx="2.5"/><rect x="274" y="18" width="11" height="11" rx="2.5"/>
+      <rect x="386" y="50" width="11" height="11" rx="2.5"/><rect x="402" y="34" width="11" height="11" rx="2.5"/>
+      <rect x="514" y="18" width="11" height="11" rx="2.5"/><rect x="530" y="34" width="11" height="11" rx="2.5"/>
+      <rect x="642" y="50" width="11" height="11" rx="2.5"/><rect x="658" y="18" width="11" height="11" rx="2.5"/>
+      <rect x="754" y="34" width="11" height="11" rx="2.5"/><rect x="786" y="18" width="11" height="11" rx="2.5"/>
+    </g>
+    <g fill="#00FF9D" opacity="0.9">
+      <rect x="98" y="18" width="11" height="11" rx="2.5"/><rect x="210" y="34" width="11" height="11" rx="2.5"/>
+      <rect x="322" y="18" width="11" height="11" rx="2.5"/><rect x="450" y="34" width="11" height="11" rx="2.5"/>
+      <rect x="578" y="50" width="11" height="11" rx="2.5"/><rect x="706" y="34" width="11" height="11" rx="2.5"/>
+      <rect x="818" y="50" width="11" height="11" rx="2.5"/>
+    </g>
+    <!-- Animated Neon Snake Path -->
+    <path d="M 7 23 L 183 23 L 183 55 L 359 55 L 359 23 L 535 23 L 535 55 L 711 55 L 711 23 L 850 23"
+          fill="none" stroke="#00FF9D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"
+          class="snake" filter="url(#sglow)"/>
+  </g>
+</svg>

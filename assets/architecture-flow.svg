@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="100%" height="220">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070B"/>
+      <stop offset="100%" stop-color="#090D16"/>
+    </linearGradient>
+    <linearGradient id="pipe1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF9D"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#CB11AB"/>
+    </linearGradient>
+    <filter id="glow3" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace; }
+    .title { font-size: 12px; font-weight: 700; fill: #94A3B8; letter-spacing: 1.5px; }
+    .node-t { font-size: 11.5px; font-weight: 800; fill: #F8FAFC; }
+    .node-s { font-size: 9.5px; fill: #94A3B8; }
+    .flow-line { stroke-dasharray: 6 6; animation: march 1.2s linear infinite; }
+    @keyframes march { to { stroke-dashoffset: -24; } }
+  </style>
+
+  <rect width="900" height="220" rx="10" fill="url(#bg3)" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="24" y="28" class="mono title">REAL-TIME INFRASTRUCTURE TOPOLOGY // QUANT HFT &amp; AUTONOMOUS AI PIPELINE</text>
+
+  <!-- Connecting Pipelines -->
+  <path id="p1" d="M 210 95 L 265 95" fill="none" stroke="#00FF9D" stroke-width="2" class="flow-line"/>
+  <path id="p2" d="M 435 95 L 490 95" fill="none" stroke="#38BDF8" stroke-width="2" class="flow-line"/>
+  <path id="p3" d="M 660 95 L 715 95" fill="none" stroke="#CB11AB" stroke-width="2" class="flow-line"/>
+
+  <!-- Moving Data Packets -->
+  <circle r="4" fill="#00FF9D" filter="url(#glow3)">
+    <animateMotion dur="1.4s" repeatCount="indefinite" path="M 210 95 L 265 95"/>
+  </circle>
+  <circle r="4" fill="#38BDF8" filter="url(#glow3)">
+    <animateMotion dur="1.4s" begin="0.4s" repeatCount="indefinite" path="M 435 95 L 490 95"/>
+  </circle>
+  <circle r="4" fill="#E879F9" filter="url(#glow3)">
+    <animateMotion dur="1.4s" begin="0.8s" repeatCount="indefinite" path="M 660 95 L 715 95"/>
+  </circle>
+
+  <!-- Node 1 -->
+  <g transform="translate(24, 52)">
+    <rect width="186" height="86" rx="8" fill="#08121E" stroke="#00FF9D" stroke-width="1.2"/>
+    <text x="14" y="24" class="mono node-t" fill="#00FF9D">01. INGESTION FEED</text>
+    <text x="14" y="44" class="mono node-s">• MOEX / Crypto L2 Book</text>
+    <text x="14" y="60" class="mono node-s">• e-Disclosure Snipers</text>
+    <text x="14" y="76" class="mono node-s">• Viral Trend Radar</text>
+  </g>
+
+  <!-- Node 2 -->
+  <g transform="translate(265, 52)">
+    <rect width="170" height="86" rx="8" fill="#08121E" stroke="#38BDF8" stroke-width="1.2"/>
+    <text x="14" y="24" class="mono node-t" fill="#38BDF8">02. NEURAL &amp; QUANT</text>
+    <text x="14" y="44" class="mono node-s">• Claude Opus / Gemini</text>
+    <text x="14" y="60" class="mono node-s">• Alpha Signal Scoring</text>
+    <text x="14" y="76" class="mono node-s">•WB High-Load Patterns</text>
+  </g>
+
+  <!-- Node 3 -->
+  <g transform="translate(490, 52)">
+    <rect width="170" height="86" rx="8" fill="#08121E" stroke="#818CF8" stroke-width="1.2"/>
+    <text x="14" y="24" class="mono node-t" fill="#818CF8">03. COMPUTE FLEET</text>
+    <text x="14" y="44" class="mono node-s">• Veo / Nano Banana 3D</text>
+    <text x="14" y="60" class="mono node-s">• Whisper + FFmpeg GPU</text>
+    <text x="14" y="76" class="mono node-s">• Asyncio HFT Routers</text>
+  </g>
+
+  <!-- Node 4 -->
+  <g transform="translate(715, 52)">
+    <rect width="161" height="86" rx="8" fill="#08121E" stroke="#CB11AB" stroke-width="1.2"/>
+    <text x="14" y="24" class="mono node-t" fill="#F0ABFC">04. DISTRIBUTION</text>
+    <text x="14" y="44" class="mono node-s">• 9 Social Networks</text>
+    <text x="14" y="60" class="mono node-s">• Live Order Execution</text>
+    <text x="14" y="76" class="mono node-s">• Telegram Control HUD</text>
+  </g>
+
+  <!-- Bottom Stack Telemetry Strip -->
+  <rect x="24" y="158" width="852" height="44" rx="6" fill="#070B12" stroke="#141E30" stroke-width="1"/>
+  <g transform="translate(40, 184)" class="mono" font-size="11" font-weight="700">
+    <text x="0" y="0" fill="#00FF9D">STACK //</text>
+    <text x="72" y="0" fill="#E2E8F0">Python • Go • C++ • Asyncio • PyTorch • Playwright • ADB • FFmpeg • PostgreSQL • Redis • Docker • Linux</text>
+  </g>
+</svg>
