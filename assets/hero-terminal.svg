@@ -1,26 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="100%" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="100%" height="360">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#05070B"/>
-      <stop offset="50%" stop-color="#090D16"/>
-      <stop offset="100%" stop-color="#05070B"/>
+      <stop offset="0%" stop-color="#04060A"/>
+      <stop offset="50%" stop-color="#080C14"/>
+      <stop offset="100%" stop-color="#04060A"/>
     </linearGradient>
     <linearGradient id="emerald" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00FF9D"/>
-      <stop offset="100%" stop-color="#00B8FF"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#00FF9D"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FDE047"/>
     </linearGradient>
     <linearGradient id="alphaFill" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00FF9D" stop-opacity="0.28"/>
+      <stop offset="0%" stop-color="#00FF9D" stop-opacity="0.30"/>
       <stop offset="100%" stop-color="#00FF9D" stop-opacity="0.0"/>
     </linearGradient>
-    <linearGradient id="wbGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#CB11AB"/>
-      <stop offset="100%" stop-color="#7B2CBF"/>
-    </linearGradient>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#141E30" stroke-width="0.7"/>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#111A2B" stroke-width="0.7"/>
     </pattern>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
@@ -29,112 +30,121 @@
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace; }
     .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    .title { font-size: 26px; font-weight: 800; fill: #F8FAFC; letter-spacing: 1.5px; }
-    .sub { font-size: 12.5px; font-weight: 600; fill: #00FF9D; letter-spacing: 2px; }
-    .muted { font-size: 11px; fill: #64748B; }
-    .val { font-size: 12px; font-weight: 700; fill: #E2E8F0; }
-    .tag { font-size: 10.5px; font-weight: 700; fill: #00FF9D; }
-    .pulse { animation: blink 2s infinite ease-in-out; }
-    .scan { animation: scanline 6s linear infinite; }
-    .dash { stroke-dasharray: 420; stroke-dashoffset: 420; animation: draw 4s ease-out infinite alternate; }
-    .bar1 { animation: b1 1.8s ease-in-out infinite alternate; }
-    .bar2 { animation: b2 1.4s ease-in-out infinite alternate; }
-    .bar3 { animation: b3 2.1s ease-in-out infinite alternate; }
-    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
-    @keyframes scanline { 0% { transform: translateY(0px); } 100% { transform: translateY(340px); } }
-    @keyframes draw { 0% { stroke-dashoffset: 420; } 100% { stroke-dashoffset: 0; } }
-    @keyframes b1 { 0% { width: 45px; } 100% { width: 110px; } }
-    @keyframes b2 { 0% { width: 85px; } 100% { width: 35px; } }
-    @keyframes b3 { 0% { width: 60px; } 100% { width: 125px; } }
+    .title { font-size: 27px; font-weight: 900; fill: #F8FAFC; letter-spacing: 1.8px; }
+    .sub { font-size: 11.5px; font-weight: 700; fill: #00FF9D; letter-spacing: 2.2px; }
+    .muted { font-size: 10.5px; fill: #64748B; }
+    .val { font-size: 12.5px; font-weight: 700; fill: #E2E8F0; }
+    .tag { font-size: 10.5px; font-weight: 800; fill: #00FF9D; }
+    .pulse { animation: blink 1.8s infinite ease-in-out; }
+    .scan { animation: scanline 5.5s linear infinite; }
+    .dash { stroke-dasharray: 450; stroke-dashoffset: 450; animation: draw 3.8s ease-out infinite alternate; }
+    .wave { stroke-dasharray: 8 6; animation: march 1.2s linear infinite; }
+    .b1 { animation: barA 1.6s ease-in-out infinite alternate; }
+    .b2 { animation: barB 1.3s ease-in-out infinite alternate; }
+    .b3 { animation: barC 1.9s ease-in-out infinite alternate; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+    @keyframes scanline { 0% { transform: translateY(0px); } 100% { transform: translateY(360px); } }
+    @keyframes draw { 0% { stroke-dashoffset: 450; } 100% { stroke-dashoffset: 0; } }
+    @keyframes march { to { stroke-dashoffset: -28; } }
+    @keyframes barA { 0% { width: 75px; } 100% { width: 135px; } }
+    @keyframes barB { 0% { width: 120px; } 100% { width: 65px; } }
+    @keyframes barC { 0% { width: 95px; } 100% { width: 140px; } }
   </style>
 
-  <!-- Background & Grid -->
-  <rect width="900" height="340" rx="12" fill="url(#bg)" stroke="#1E293B" stroke-width="1.5"/>
-  <rect width="900" height="340" rx="12" fill="url(#grid)" opacity="0.65"/>
-  <line x1="0" y1="0" x2="900" y2="0" stroke="url(#emerald)" stroke-width="2" class="scan" opacity="0.22"/>
+  <!-- Outer Frame & Grid -->
+  <rect width="900" height="360" rx="12" fill="url(#bg)" stroke="#1E293B" stroke-width="1.5"/>
+  <rect width="900" height="360" rx="12" fill="url(#grid)" opacity="0.7"/>
+  <line x1="0" y1="0" x2="900" y2="0" stroke="url(#emerald)" stroke-width="2" class="scan" opacity="0.25"/>
 
-  <!-- Top Institutional Bar -->
-  <rect x="1" y="1" width="898" height="32" rx="11" fill="#0B101B" stroke="#1E293B" stroke-width="1"/>
+  <!-- Top Institutional Header -->
+  <rect x="1" y="1" width="898" height="32" rx="11" fill="#0A0E17" stroke="#1E293B" stroke-width="1"/>
   <circle cx="20" cy="17" r="5" fill="#EF4444"/>
   <circle cx="36" cy="17" r="5" fill="#F59E0B"/>
-  <circle cx="52" cy="17" r="5" fill="#10B981"/>
-  <text x="74" y="21" class="mono muted">ALADDIN-CORE // TERMINAL v4.8 — RU-MOSCOW-QUANT-NODE</text>
-  <circle cx="755" cy="17" r="4" fill="#00FF9D" class="pulse" filter="url(#glow)"/>
-  <text x="766" y="21" class="mono tag">LIVE EXECUTION</text>
+  <circle cx="52" cy="17" r="5" fill="#00FF9D"/>
+  <text x="74" y="21" class="mono muted">ALADDIN-EXECUTIVE // PROPRIETARY TERMINAL — PRIVATE &amp; NDA PROTECTED</text>
+  <circle cx="745" cy="17" r="4.5" fill="#00FF9D" class="pulse" filter="url(#glow)"/>
+  <text x="758" y="21" class="mono tag">TIER-1 ACTIVE</text>
 
-  <!-- Animated Ticker Tape -->
-  <rect x="1" y="33" width="898" height="24" fill="#070B12" stroke="#141E30" stroke-width="1"/>
+  <!-- Global Market & Media Ticker Strip -->
+  <rect x="1" y="33" width="898" height="24" fill="#060911" stroke="#141E30" stroke-width="1"/>
   <g class="mono" font-size="10.5" fill="#94A3B8">
     <text x="18" y="49">
-      <tspan fill="#00FF9D">▲ AI.MEDIA.NET</tspan> 9 PLATFORMS / 24x7   |   <tspan fill="#CB11AB">★ WILDBERRIES</tspan> 3Y HIGHLOAD   |   <tspan fill="#38BDF8">⚡ HFT.ORDERBOOK</tspan> &lt;0.8ms   |   <tspan fill="#F59E0B">◆ FINTECH.RU</tspan> ALPHA +EDISCLOSURE   |   <tspan fill="#00FF9D">● BMSTU</tspan> ENG
+      <tspan fill="#00FF9D">▲ AI.MEDIA.HOLDING</tspan> 100M+ REACH   |   <tspan fill="#E879F9">★ WILDBERRIES</tspan> 3Y FULL-STACK &amp; SYS/BIZ ANALYST   |   <tspan fill="#38BDF8">⚡ HFT.FINTECH.RU</tspan> PROPRIETARY   |   <tspan fill="#F59E0B">🌐 EN C1 • 中文 • RU</tspan>
     </text>
   </g>
 
-  <!-- Left Panel: Identity & Executive Summary -->
-  <g transform="translate(28, 86)">
-    <text x="0" y="0" class="mono sub">EXECUTIVE PROFILE // QUANT &amp; MEDIA SYNDICATE</text>
+  <!-- Left Executive Dossier -->
+  <g transform="translate(28, 84)">
+    <text x="0" y="0" class="mono sub">INSTITUTIONAL FINTECH • AI MEDIA MOGUL • FULL-STACK ARCHITECT</text>
     <text x="0" y="34" class="sans title">TIMOFEY SNETKOV</text>
-    <rect x="275" y="15" width="118" height="22" rx="4" fill="#0D1F1D" stroke="#00FF9D" stroke-width="1"/>
-    <text x="285" y="30" class="mono tag">@TEMASERKA</text>
+    <rect x="292" y="14" width="118" height="23" rx="4" fill="#081C18" stroke="#00FF9D" stroke-width="1.2"/>
+    <text x="302" y="30" class="mono tag">@TEMASERKA</text>
 
-    <text x="0" y="62" class="mono val" fill="#CBD5E1">
-      AI Media Mogul • HFT &amp; FinTech Architect (RU) • Ex-Wildberries (3Y)
+    <text x="0" y="60" class="mono val" fill="#E2E8F0">
+      Ex-Wildberries (3Y: Full-Stack + Systems &amp; Business Analyst)
+    </text>
+    <text x="0" y="80" class="mono val" fill="#94A3B8">
+      AI Media Mogul • HFT &amp; FinTech Russia • BMSTU
     </text>
 
-    <!-- Key Badges -->
-    <g transform="translate(0, 80)">
-      <rect x="0" y="0" width="165" height="28" rx="5" fill="#190A24" stroke="#CB11AB" stroke-width="1.2"/>
-      <text x="12" y="18" class="mono" font-size="11" font-weight="700" fill="#F0ABFC">WILDBERRIES // 3 YEARS</text>
+    <!-- Pill Badges -->
+    <g transform="translate(0, 96)">
+      <rect x="0" y="0" width="152" height="26" rx="5" fill="#190A24" stroke="#CB11AB" stroke-width="1.2"/>
+      <text x="10" y="17" class="mono" font-size="10.5" font-weight="700" fill="#F0ABFC">WB // 3Y FULL-STACK</text>
 
-      <rect x="175" y="0" width="155" height="28" rx="5" fill="#081C18" stroke="#00FF9D" stroke-width="1.2"/>
-      <text x="187" y="18" class="mono" font-size="11" font-weight="700" fill="#00FF9D">AI MEDIA EMPIRE</text>
+      <rect x="160" y="0" width="166" height="26" rx="5" fill="#190A24" stroke="#E879F9" stroke-width="1.2"/>
+      <text x="170" y="17" class="mono" font-size="10.5" font-weight="700" fill="#F5D0FE">SYS &amp; BIZ ANALYST</text>
 
-      <rect x="340" y="0" width="165" height="28" rx="5" fill="#0A1929" stroke="#38BDF8" stroke-width="1.2"/>
-      <text x="352" y="18" class="mono" font-size="11" font-weight="700" fill="#38BDF8">HFT &amp; FINTECH RU</text>
+      <rect x="334" y="0" width="172" height="26" rx="5" fill="#1E1608" stroke="#F59E0B" stroke-width="1.2"/>
+      <text x="344" y="17" class="mono" font-size="10.5" font-weight="700" fill="#FDE047">EN C1 • 中文 • RU</text>
     </g>
 
-    <!-- Terminal Readout Lines -->
-    <g transform="translate(0, 128)" class="mono" font-size="11.5">
-      <text x="0" y="0" fill="#94A3B8">&gt; <tspan fill="#00FF9D">media_holding:</tspan> Autonomous AI video factories &amp; multi-million reach networks</text>
-      <text x="0" y="22" fill="#94A3B8">&gt; <tspan fill="#38BDF8">quant_fintech:</tspan> Orderbook density, MOEX/Crypto HFT &amp; e-disclosure alpha</text>
-      <text x="0" y="44" fill="#94A3B8">&gt; <tspan fill="#F0ABFC">wb_experience:</tspan> 3 years building high-load e-commerce &amp; data systems</text>
-      <text x="0" y="66" fill="#94A3B8">&gt; <tspan fill="#F59E0B">direct_comms :</tspan> <tspan fill="#F8FAFC" font-weight="700">timofeysnetkov@yandex.ru</tspan> <tspan fill="#00FF9D" class="pulse">▊</tspan></text>
+    <!-- Classified Executive Readout -->
+    <g transform="translate(0, 144)" class="mono" font-size="11.5">
+      <text x="0" y="0" fill="#94A3B8">&gt; <tspan fill="#E879F9">wildberries_3y :</tspan> Full-Stack Dev + Systems &amp; Business Architecture</text>
+      <text x="0" y="21" fill="#94A3B8">&gt; <tspan fill="#00FF9D">media_empire   :</tspan> Autonomous AI Media Syndicate [PROPRIETARY // NDA]</text>
+      <text x="0" y="42" fill="#94A3B8">&gt; <tspan fill="#38BDF8">hft_fintech_ru :</tspan> Quantitative Execution &amp; Capital Systems [CLASSIFIED]</text>
+      <text x="0" y="63" fill="#94A3B8">&gt; <tspan fill="#F59E0B">languages      :</tspan> Russian (Native) • English (C1) • Chinese (中文)</text>
+      <text x="0" y="84" fill="#94A3B8">&gt; <tspan fill="#00FF9D">executive_mail :</tspan> <tspan fill="#F8FAFC" font-weight="700">timofeysnetkov@yandex.ru</tspan> <tspan fill="#00FF9D" class="pulse">▊</tspan></text>
     </g>
   </g>
 
-  <!-- Right Panel: Live Alpha & Orderbook Telemetry -->
-  <g transform="translate(565, 72)">
-    <rect x="0" y="0" width="310" height="244" rx="8" fill="#070B12" stroke="#1E293B" stroke-width="1.2"/>
-    <text x="16" y="24" class="mono muted">PORTFOLIO ALPHA &amp; MEDIA VELOCITY</text>
-    <text x="235" y="24" class="mono tag">+342.8% ▲</text>
+  <!-- Right Panel: Proprietary Alpha & Capital Velocity -->
+  <g transform="translate(562, 72)">
+    <rect x="0" y="0" width="314" height="264" rx="8" fill="#060A11" stroke="#1E293B" stroke-width="1.2"/>
+    <text x="16" y="24" class="mono muted">ALPHA INDEX &amp; MEDIA CAPITAL</text>
+    <text x="232" y="24" class="mono tag">+418.4% ▲</text>
 
-    <!-- Equity Curve Chart -->
+    <!-- Dual Curve Chart -->
     <g transform="translate(16, 38)">
-      <line x1="0" y1="0" x2="278" y2="0" stroke="#141E30" stroke-width="1"/>
-      <line x1="0" y1="35" x2="278" y2="35" stroke="#141E30" stroke-width="1"/>
-      <line x1="0" y1="70" x2="278" y2="70" stroke="#141E30" stroke-width="1"/>
-      <line x1="0" y1="105" x2="278" y2="105" stroke="#141E30" stroke-width="1"/>
+      <line x1="0" y1="0" x2="282" y2="0" stroke="#141E30" stroke-width="1"/>
+      <line x1="0" y1="36" x2="282" y2="36" stroke="#141E30" stroke-width="1"/>
+      <line x1="0" y1="72" x2="282" y2="72" stroke="#141E30" stroke-width="1"/>
+      <line x1="0" y1="108" x2="282" y2="108" stroke="#141E30" stroke-width="1"/>
 
-      <path d="M 0 98 L 35 88 L 70 92 L 105 68 L 140 72 L 175 44 L 210 49 L 245 22 L 278 8 L 278 105 L 0 105 Z" fill="url(#alphaFill)"/>
-      <path d="M 0 98 L 35 88 L 70 92 L 105 68 L 140 72 L 175 44 L 210 49 L 245 22 L 278 8" fill="none" stroke="url(#emerald)" stroke-width="2.5" class="dash" filter="url(#glow)"/>
-      <circle cx="278" cy="8" r="4.5" fill="#00FF9D" class="pulse" filter="url(#glow)"/>
+      <path d="M 0 100 L 40 90 L 80 94 L 120 66 L 160 70 L 200 38 L 240 42 L 282 10 L 282 108 L 0 108 Z" fill="url(#alphaFill)"/>
+      <path d="M 0 102 L 45 84 L 90 88 L 135 58 L 180 62 L 225 32 L 282 22" fill="none" stroke="#38BDF8" stroke-width="1.5" class="wave" opacity="0.7"/>
+      <path d="M 0 100 L 40 90 L 80 94 L 120 66 L 160 70 L 200 38 L 240 42 L 282 10" fill="none" stroke="url(#emerald)" stroke-width="2.6" class="dash" filter="url(#glow)"/>
+      <circle cx="282" cy="10" r="4.5" fill="#00FF9D" class="pulse" filter="url(#glow)"/>
     </g>
 
-    <!-- Live Orderbook / Cluster Bars -->
-    <g transform="translate(16, 160)" class="mono" font-size="10">
-      <text x="0" y="0" fill="#64748B">L2 ORDERBOOK DENSITY &amp; GPU CLUSTER LOAD</text>
+    <!-- Proprietary Telemetry Bars -->
+    <g transform="translate(16, 168)" class="mono" font-size="10">
+      <text x="0" y="0" fill="#64748B">PROPRIETARY CORE METRICS // NDA</text>
 
-      <text x="0" y="20" fill="#94A3B8">BID/LIQ</text>
-      <rect x="62" y="11" width="110" height="9" rx="2" fill="#00FF9D" opacity="0.85" class="bar1"/>
-      <text x="215" y="20" fill="#00FF9D">99.4% FILL</text>
+      <text x="0" y="22" fill="#94A3B8">HFT CORE</text>
+      <rect x="68" y="13" width="135" height="9" rx="2" fill="#00FF9D" opacity="0.9" class="b1"/>
+      <text x="220" y="22" fill="#00FF9D">SUB-MS</text>
 
-      <text x="0" y="38" fill="#94A3B8">ASK/VOL</text>
-      <rect x="62" y="29" width="85" height="9" rx="2" fill="#38BDF8" opacity="0.85" class="bar2"/>
-      <text x="215" y="38" fill="#38BDF8">0.4ms RTT</text>
+      <text x="0" y="42" fill="#94A3B8">AI MEDIA</text>
+      <rect x="68" y="33" width="120" height="9" rx="2" fill="#38BDF8" opacity="0.9" class="b2"/>
+      <text x="220" y="42" fill="#38BDF8">SCALE 24/7</text>
 
-      <text x="0" y="56" fill="#94A3B8">AI PIPE</text>
-      <rect x="62" y="47" width="125" height="9" rx="2" fill="#CB11AB" opacity="0.9" class="bar3"/>
-      <text x="215" y="56" fill="#F0ABFC">24/7 AUTO</text>
+      <text x="0" y="62" fill="#94A3B8">WB ARCH</text>
+      <rect x="68" y="53" width="140" height="9" rx="2" fill="#E879F9" opacity="0.9" class="b3"/>
+      <text x="220" y="62" fill="#F0ABFC">TIER-1</text>
+
+      <text x="0" y="82" fill="#64748B">STATUS: <tspan fill="#FDE047">PRIVATE ARCHITECTURE (CLOSED SOURCE)</tspan></text>
     </g>
   </g>
 </svg>
